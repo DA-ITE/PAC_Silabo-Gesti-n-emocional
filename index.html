@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sílabo | Gestión emocional del aula y manejo de crisis</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pink:#FF0E49;
+  --pink-dark:#D90043;
+  --dark:#171416;
+  --dark-2:#241F21;
+  --wine:#4A1026;
+  --ink:#2E292B;
+  --muted:#746C70;
+  --line:#E4DDE0;
+  --soft:#FFF2F6;
+  --soft-2:#FAF8F9;
+  --paper:#FFFFFF;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 7% 4%,rgba(255,14,73,.08),transparent 22%),
+    linear-gradient(180deg,#F1EEF0 0%,#F8F6F7 45%,#ECE8EA 100%);
+  font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
+  line-height:1.5;
+}
+
+.syllabus{
+  width:min(1180px,calc(100% - 28px));
+  margin:28px auto 42px;
+  overflow:hidden;
+  border:1px solid #DED7DA;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 24px 60px rgba(35,31,32,.14);
+}
+
+/* =====================================================
+   PORTADA
+===================================================== */
+
+.hero{
+  position:relative;
+  min-height:620px;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 12% 88%,rgba(255,14,73,.18),transparent 31%),
+    linear-gradient(112deg,#171416 0%,#241C1F 70%,#F30048 70%,#FF0E49 100%);
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:380px;
+  height:380px;
+  right:-150px;
+  top:-130px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:50%;
+}
+
+.hero:after{
+  content:"»";
+  position:absolute;
+  right:64px;
+  bottom:46px;
+  color:#fff;
+  font-size:112px;
+  font-weight:900;
+  line-height:1;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  min-height:620px;
+  padding:56px 68px 54px;
+}
+
+.brand-row{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:22px;
+}
+
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 16px;
+  border-radius:9px;
+  color:var(--pink);
+  background:#fff;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  font-size:34px;
+  font-weight:900;
+  line-height:1;
+}
+
+.brand small{
+  color:var(--dark-2);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.hero-year{
+  padding-top:4px;
+  color:#241D20;
+  font-size:24px;
+  font-weight:700;
+  letter-spacing:4px;
+}
+
+.badge{
+  display:inline-block;
+  margin-top:18px;
+  padding:7px 14px;
+  border:1px solid rgba(255,255,255,.42);
+  border-radius:999px;
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+}
+
+.hero-main{
+  max-width:810px;
+  margin-top:88px;
+}
+
+.kicker{
+  margin-bottom:17px;
+  color:#FF7BA2;
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin:0;
+  color:#fff;
+  font-size:clamp(42px,5.2vw,66px);
+  line-height:1.02;
+  font-weight:500;
+  letter-spacing:-1.2px;
+  text-transform:uppercase;
+}
+
+.hero h1 strong{
+  font-weight:900;
+}
+
+.hero-copy{
+  max-width:750px;
+  margin-top:20px;
+  color:#E7DEE1;
+  font-size:19px;
+  line-height:1.48;
+  font-weight:500;
+}
+
+.hero-rule{
+  width:64%;
+  height:2px;
+  margin-top:42px;
+  background:linear-gradient(90deg,var(--pink),transparent);
+}
+
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+  max-width:760px;
+  margin-top:18px;
+}
+
+.stat strong{
+  display:block;
+  color:#fff;
+  font-size:24px;
+  font-weight:600;
+}
+
+.stat span{
+  display:block;
+  margin-top:3px;
+  color:#AAA0A4;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+/* =====================================================
+   CONTENIDO GENERAL
+===================================================== */
+
+.content{
+  padding:48px 62px 58px;
+}
+
+.section{
+  margin:0 0 46px;
+  scroll-margin-top:18px;
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin:0 0 20px;
+  color:var(--dark-2);
+  font-size:34px;
+  line-height:1.1;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.section-no{
+  display:inline-flex;
+  flex:0 0 46px;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  color:#fff;
+  background:var(--pink);
+  font-size:16px;
+  font-weight:900;
+  box-shadow:0 0 0 8px rgba(255,14,73,.09);
+}
+
+/* =====================================================
+   DATOS GENERALES
+===================================================== */
+
+.data-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+
+.data-card{
+  min-height:128px;
+  padding:25px 20px;
+  border:1px solid #E7DEE1;
+  border-radius:15px;
+  background:#fff;
+  box-shadow:0 10px 26px rgba(36,31,33,.04);
+}
+
+.data-card span{
+  display:block;
+  color:var(--pink);
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+}
+
+.data-card strong{
+  display:block;
+  margin-top:15px;
+  color:var(--dark);
+  font-size:25px;
+  line-height:1.1;
+  font-weight:800;
+}
+
+/* =====================================================
+   CAJAS DE TEXTO
+===================================================== */
+
+.lead-box{
+  padding:25px 29px;
+  border-left:7px solid var(--pink);
+  border-radius:0 10px 10px 0;
+  background:linear-gradient(90deg,#FFF0F5,#FFF);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15.5px;
+  line-height:1.75;
+  text-align:left;
+}
+
+.lead-box p{
+  margin:0;
+}
+
+.lead-box p+p{
+  margin-top:14px;
+}
+
+.highlight{
+  padding:26px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--dark-2),#3A282E 72%,var(--wine));
+  color:#fff;
+}
+
+.highlight strong{
+  display:block;
+  margin-bottom:7px;
+  color:#FFACC3;
+  font-size:14px;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+
+.highlight p{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  line-height:1.7;
+}
+
+.competency-card{
+  padding:22px;
+  margin-bottom:14px;
+  border:1px solid var(--line);
+  border-left:6px solid var(--pink);
+  border-radius:12px;
+  background:#fff;
+}
+
+.competency-card strong{
+  display:block;
+  color:var(--pink);
+  font-size:22px;
+  margin-bottom:7px;
+}
+
+.competency-card p{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14.5px;
+  line-height:1.65;
+}
+
+/* =====================================================
+   ORGANIZACIÓN DEL APRENDIZAJE
+===================================================== */
+
+.learning-module{
+  display:grid;
+  grid-template-columns:275px 1fr;
+  margin-bottom:24px;
+  overflow:hidden;
+  border:1px solid #D8D0D3;
+  border-radius:16px;
+  background:#fff;
+}
+
+.learning-label{
+  display:flex;
+  align-items:flex-start;
+  padding:25px 24px;
+  color:#fff;
+  background:var(--pink);
+  border-bottom:1px solid rgba(255,255,255,.55);
+  font-size:17px;
+  font-weight:900;
+  line-height:1.25;
+  text-transform:uppercase;
+}
+
+.learning-value{
+  display:flex;
+  align-items:center;
+  min-height:90px;
+  padding:24px;
+  border-bottom:1px solid #DDD6D8;
+  color:var(--dark-2);
+  font-size:20px;
+  font-weight:600;
+  line-height:1.5;
+}
+
+.learning-value.module-name{
+  font-size:28px;
+  font-weight:900;
+  line-height:1.15;
+}
+
+.learning-value ul{
+  width:100%;
+  margin:0;
+  padding-left:25px;
+}
+
+.learning-value li{
+  margin:9px 0;
+}
+
+.learning-value li::marker{
+  color:var(--pink);
+}
+
+.learning-module > :nth-last-child(-n+2){
+  border-bottom:0;
+}
+
+/* =====================================================
+   ESTRATEGIAS
+===================================================== */
+
+.strategy-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.strategy{
+  min-height:112px;
+  display:flex;
+  align-items:flex-end;
+  padding:18px;
+  border:1px solid #F0D9E1;
+  border-top:5px solid var(--pink);
+  border-radius:12px;
+  background:linear-gradient(150deg,#FFF,#FFF4F7);
+}
+
+.strategy strong{
+  font-size:19px;
+  line-height:1.15;
+}
+
+/* =====================================================
+   EVALUACIÓN
+===================================================== */
+
+.eval-wrap{
+  overflow:hidden;
+  border:1px solid #AFA8AA;
+  border-radius:15px;
+}
+
+.eval-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.eval-table th{
+  padding:17px 14px;
+  color:#fff;
+  background:var(--pink);
+  border-right:1px solid rgba(255,255,255,.5);
+  text-align:center;
+  font-size:16px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.eval-table td{
+  padding:18px 14px;
+  border-top:1px solid #BEB8BA;
+  border-right:1px solid #BEB8BA;
+  background:#fff;
+  vertical-align:top;
+  color:#302B2D;
+  font-size:16px;
+  line-height:1.5;
+}
+
+.eval-table th:last-child,
+.eval-table td:last-child{
+  border-right:0;
+}
+
+.eval-table .eval-name{
+  color:#fff;
+  background:var(--pink);
+  font-size:19px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.eval-table .eval-code{
+  text-align:center;
+  font-size:20px;
+  font-weight:900;
+}
+
+.eval-table .eval-evidence strong{
+  color:var(--dark-2);
+}
+
+.eval-table .eval-weight{
+  text-align:center;
+  color:var(--dark);
+  font-size:27px;
+  font-weight:900;
+}
+
+.eval-formula{
+  padding:18px 20px;
+  color:#fff;
+  background:var(--pink);
+  text-align:center;
+  font-size:21px;
+  font-weight:900;
+}
+
+/* =====================================================
+   TABLAS
+===================================================== */
+
+.table-wrap{
+  overflow-x:auto;
+  border:1px solid var(--line);
+  border-radius:12px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th{
+  padding:13px 14px;
+  background:var(--pink);
+  color:#fff;
+  text-align:left;
+  font-size:14px;
+}
+
+td{
+  padding:14px;
+  border-top:1px solid var(--line);
+  vertical-align:top;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13.5px;
+  line-height:1.5;
+}
+
+tbody tr:nth-child(even){
+  background:#FCFAFB;
+}
+
+.module-col{
+  color:#fff;
+  background:var(--dark-2)!important;
+  text-align:center;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:28px;
+  font-weight:900;
+  vertical-align:middle;
+}
+
+.topic-col h4{
+  margin:0;
+  color:var(--pink);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:20px;
+  line-height:1.1;
+}
+
+
+/* =====================================================
+   SECUENCIA DIDÁCTICA / CYCLE LEARNING
+===================================================== */
+
+.cycle-map{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin:18px 0 20px;
+}
+
+.cycle-step{
+  position:relative;
+  padding:18px 16px;
+  border:1px solid #ECD7DE;
+  border-radius:13px;
+  background:#fff;
+  min-height:118px;
+}
+
+.cycle-step:before{
+  content:"»";
+  position:absolute;
+  right:12px;
+  top:8px;
+  color:rgba(255,14,73,.16);
+  font-size:44px;
+  font-weight:900;
+  line-height:1;
+}
+
+.cycle-step strong{
+  display:block;
+  color:var(--pink);
+  font-size:20px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.cycle-step span{
+  display:block;
+  margin-top:8px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13.5px;
+  line-height:1.5;
+  color:var(--ink);
+}
+
+.bridge-box{
+  margin:16px 0 0;
+  padding:20px 22px;
+  border:1px solid #D8D0D3;
+  border-left:7px solid var(--pink);
+  border-radius:0 12px 12px 0;
+  background:#FFF8FA;
+}
+
+.bridge-box strong{
+  display:block;
+  color:var(--dark-2);
+  font-size:21px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.bridge-box p{
+  margin:7px 0 0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14.5px;
+  line-height:1.65;
+}
+
+.moment-table th:nth-child(1){width:8%}
+.moment-table th:nth-child(2){width:13%}
+.moment-table th:nth-child(3){width:10%}
+.moment-table th:nth-child(4){width:19%}
+.moment-table th:nth-child(5){width:50%}
+
+.moment-name{
+  color:var(--pink);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:18px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.resource-pill{
+  display:inline-block;
+  padding:5px 9px;
+  margin:2px 4px 4px 0;
+  border-radius:999px;
+  background:#FFF0F5;
+  color:#9D1239;
+  border:1px solid #F5CBD8;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px;
+  font-weight:800;
+}
+
+.observe-note{
+  margin-top:7px;
+  padding:9px 11px;
+  border-radius:8px;
+  background:#F8F5F6;
+  font-size:12.5px;
+  line-height:1.5;
+}
+
+@media(max-width:900px){
+  .cycle-map{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:650px){
+  .cycle-map{grid-template-columns:1fr}
+}
+
+/* =====================================================
+   REFERENCIAS
+===================================================== */
+
+.references{
+  margin:0;
+  padding:20px 20px 20px 38px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.references li{
+  margin:7px 0;
+}
+
+/* =====================================================
+   CERTIFICACIÓN
+===================================================== */
+
+.cert-box{
+  padding:24px;
+  border:1px solid var(--line);
+  border-left:6px solid var(--pink);
+  border-radius:12px;
+  background:#fff;
+}
+
+.cert-box strong{
+  color:var(--pink);
+  font-size:22px;
+}
+
+.cert-box p{
+  margin:8px 0 0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:20px 28px;
+  color:#fff;
+  background:var(--dark-2);
+  font-size:14px;
+  letter-spacing:.4px;
+}
+
+.footer strong{
+  color:var(--pink);
+}
+
+.pdf-download-float{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:50;
+  padding:13px 18px;
+  border:0;
+  border-radius:999px;
+  color:#fff;
+  background:var(--dark-2);
+  box-shadow:0 12px 30px rgba(36,31,33,.28);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.pdf-download-float:hover{
+  background:#3C3034;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+  .hero-inner{
+    padding:42px 34px;
+  }
+
+  .content{
+    padding:38px 28px;
+  }
+
+  .data-grid,
+  .strategy-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .learning-module{
+    grid-template-columns:230px 1fr;
+  }
+}
+
+@media(max-width:650px){
+
+  .syllabus{
+    width:100%;
+    margin:0;
+    border:0;
+    border-radius:0;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-inner{
+    min-height:auto;
+    padding:30px 22px 42px;
+  }
+
+  .hero-main{
+    margin-top:60px;
+  }
+
+  .hero-year{
+    color:#fff;
+    font-size:16px;
+  }
+
+  .hero-stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .content{
+    padding:30px 18px;
+  }
+
+  .data-grid,
+  .strategy-grid{
+    grid-template-columns:1fr;
+  }
+
+  .learning-module{
+    grid-template-columns:1fr;
+  }
+
+  .section-title{
+    align-items:flex-start;
+    font-size:27px;
+  }
+
+  .footer{
+    flex-direction:column;
+  }
+}
+
+@media print{
+
+  body{
+    background:#fff;
+  }
+
+  .syllabus{
+    width:100%;
+    margin:0;
+    border:0;
+    box-shadow:none;
+  }
+
+  .pdf-download-float{
+    display:none;
+  }
+
+  .section,
+  .learning-module,
+  .competency-card{
+    break-inside:avoid;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="syllabus">
+
+<!-- ==================================================
+     PORTADA
+================================================== -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="brand-row">
+
+      <div class="brand">
+        SISE
+        <small>Instituto Superior</small>
+      </div>
+
+      <div class="hero-year">
+        2026
+      </div>
+
+    </div>
+
+    <span class="badge">
+      Plan Anual de Capacitación Docente
+    </span>
+
+    <div class="hero-main">
+
+      <div class="kicker">
+        Sílabo de formación docente
+      </div>
+
+      <h1>
+        <strong>Gestión emocional</strong><br>
+        del aula y manejo de crisis
+      </h1>
+
+      <p class="hero-copy">
+        Fortalece la capacidad docente para reconocer situaciones que
+        afectan el aprendizaje, responder desde su rol pedagógico,
+        gestionar sus propias emociones y aprender mediante una secuencia de
+        reflexión, modelado breve, práctica guiada y transferencia ante situaciones de tensión o crisis.
+      </p>
+
+      <div class="badge" style="margin-top:18px;background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.25)">
+        Ruta: Reconocer → Conectar → Regularse → Contener → Intervenir → Acompañar
+      </div>
+
+      <div class="hero-rule"></div>
+
+      <div class="hero-stats">
+
+        <div class="stat">
+          <strong>4 H</strong>
+          <span>Horas</span>
+        </div>
+
+        <div class="stat">
+          <strong>2</strong>
+          <span>Módulos</span>
+        </div>
+
+        <div class="stat">
+          <strong>4</strong>
+          <span>Temas</span>
+        </div>
+
+        <div class="stat">
+          <strong>Online</strong>
+          <span>Asíncrono</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="content">
+
+<!-- ==================================================
+     1 DATOS GENERALES
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">1</span>
+    Datos generales
+  </h2>
+
+  <div class="data-grid">
+
+    <div class="data-card">
+      <span>Condición</span>
+      <strong>PAC Docente</strong>
+    </div>
+
+    <div class="data-card">
+      <span>Vigencia del curso</span>
+      <strong>2 meses</strong>
+    </div>
+
+    <div class="data-card">
+      <span>Horas</span>
+      <strong>4 horas</strong>
+    </div>
+
+    <div class="data-card">
+      <span>Modalidad</span>
+      <strong>Online</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     2 SUMILLA
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">2</span>
+    Sumilla
+  </h2>
+
+  <div class="lead-box">
+
+    <p>
+      El curso <strong>Gestión emocional del aula y manejo de crisis</strong>
+      desarrolla capacidades docentes para reconocer situaciones que pueden
+      afectar el aprendizaje, la participación y el vínculo con el estudiante,
+      y responder desde el ámbito pedagógico mediante estrategias de escucha,
+      comunicación reguladora, acompañamiento académico, contención y
+      desescalamiento de situaciones de tensión o crisis.
+    </p>
+
+    <p>
+      El curso aborda la identificación de señales observables asociadas a
+      desmotivación, frustración, baja participación, inasistencia, dificultades
+      de desempeño y riesgo de desvinculación; así como la aplicación de
+      estrategias que el docente puede gestionar directamente en el aula:
+      clarificación de expectativas, acuerdos de mejora, retroalimentación
+      formativa, recuperación de la participación, establecimiento de límites
+      y seguimiento académico.
+    </p>
+
+    <p>
+      Asimismo, fortalece la capacidad del docente para gestionar sus propias
+      emociones frente a situaciones de presión, conflicto o alta demanda,
+      mediante estrategias de autorregulación, pausa consciente,
+      identificación de detonantes, regulación del tono, reformulación de
+      respuestas y toma de decisiones para contener el escalamiento.
+    </p>
+
+    <p>
+      Cuando una situación se intensifica o excede el ámbito pedagógico, el docente
+      aplica una secuencia inicial de actuación: reconocer, contener, evaluar,
+      actuar, derivar y dar seguimiento. Reconoce los límites de su función,
+      mantiene una comunicación respetuosa y activa los canales institucionales
+      correspondientes sin asumir funciones especializadas que no corresponden a su rol.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     3 LOGRO
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">3</span>
+    Logro destacado del curso
+  </h2>
+
+  <div class="highlight">
+
+    <strong>
+      ¿Qué lograrás al finalizar?
+    </strong>
+
+    <p>
+      Gestionar situaciones de tensión, conflicto, crisis y riesgo de desconexión
+      académica mediante intervenciones docentes empáticas, reguladoras y oportunas,
+      aplicando estrategias de acompañamiento académico, autorregulación emocional,
+      desescalamiento y comunicación efectiva para preservar el vínculo con el
+      estudiante, favorecer su participación y actuar dentro de los límites del rol docente.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     4 COMPETENCIAS
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">4</span>
+    Competencias por desarrollar
+  </h2>
+
+  <div class="competency-card">
+
+    <strong>
+      C1 – Liderazgo Pedagógico del Docente en el Aula
+    </strong>
+
+    <p>
+      Capacidad de influir positivamente en el aprendizaje y desarrollo
+      integral de los estudiantes desde su rol como facilitador del proceso
+      educativo. Implica crear ambientes estimulantes, inclusivos y
+      colaborativos, guiar y motivar hacia el logro, fomentar la reflexión
+      crítica y autonomía y mantener compromiso con la excelencia educativa.
+    </p>
+
+  </div>
+
+  <div class="competency-card">
+
+    <strong>
+      C3 – Comunicación Efectiva
+    </strong>
+
+    <p>
+      Habilidad para expresar ideas, pensamientos e información de manera
+      clara, precisa y respetuosa, escuchando activamente y comprendiendo
+      las perspectivas del estudiante. Implica comunicación empática,
+      adaptación a distintas audiencias, sentido de servicio y generación
+      de confianza durante el proceso formativo.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     5 ORGANIZACIÓN DEL APRENDIZAJE
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">5</span>
+    Organización del aprendizaje
+  </h2>
+
+
+  <!-- MÓDULO 1 -->
+
+  <div class="learning-module">
+
+    <div class="learning-label">
+      Módulo de aprendizaje #1
+    </div>
+
+    <div class="learning-value module-name">
+      Reconocer para conectar: lectura de situaciones y respuesta docente
+    </div>
+
+    <div class="learning-label">
+      Resultado de aprendizaje
+    </div>
+
+    <div class="learning-value">
+      Analizar señales observables relacionadas con participación, desempeño,
+      frustración y riesgo de desconexión para seleccionar respuestas docentes
+      empáticas y acciones pedagógicas que contribuyan a recuperar el vínculo,
+      la participación y la continuidad del estudiante.
+    </div>
+
+    <div class="learning-label">
+      Contenidos involucrados
+    </div>
+
+    <div class="learning-value">
+
+      <ul>
+
+        <li>
+          Identificación de cambios en participación, asistencia, desempeño,
+          comunicación y cumplimiento académico.
+        </li>
+
+        <li>
+          Diferenciación entre hechos observables, interpretaciones y juicios.
+        </li>
+
+        <li>
+          Escucha activa, preguntas abiertas y validación de la experiencia
+          del estudiante.
+        </li>
+
+        <li>
+          Estrategias de acompañamiento académico frente a frustración,
+          desmotivación y dificultades de desempeño.
+        </li>
+
+        <li>
+          Acuerdos de mejora, seguimiento y recuperación progresiva de la
+          participación.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <!-- MÓDULO 2 -->
+
+  <div class="learning-module">
+
+    <div class="learning-label">
+      Módulo de aprendizaje #2
+    </div>
+
+    <div class="learning-value module-name">
+      Regular para intervenir: gestión emocional, desescalamiento y actuación ante crisis
+    </div>
+
+    <div class="learning-label">
+      Resultado de aprendizaje
+    </div>
+
+    <div class="learning-value">
+      Aplicar estrategias de autorregulación, comunicación reguladora,
+      desescalamiento y actuación pedagógica ante situaciones de tensión o crisis
+      para responder de manera respetuosa, establecer límites, contener el
+      escalamiento, orientar la conversación hacia soluciones académicas y reconocer
+      cuándo una situación requiere derivación institucional.
+    </div>
+
+    <div class="learning-label">
+      Contenidos involucrados
+    </div>
+
+    <div class="learning-value">
+
+      <ul>
+
+        <li>
+          Reconocimiento de detonantes, señales de activación y respuestas automáticas del propio docente.
+        </li>
+
+        <li>
+          Estrategias breves de autorregulación antes, durante y después de una
+          situación de tensión o crisis.
+        </li>
+
+        <li>
+          Manejo de reclamos, frustración, resistencia, desacuerdo, conflictos y
+          situaciones críticas vinculadas con la experiencia académica.
+        </li>
+
+        <li>
+          Comunicación reguladora, establecimiento de límites, contención y
+          desescalamiento de la interacción.
+        </li>
+
+        <li>
+          Aplicación de la secuencia RECONOCER → CONTENER → EVALUAR → ACTUAR →
+          DERIVAR → DAR SEGUIMIENTO para decidir qué corresponde al rol docente
+          y cuándo activar orientación institucional.
+        </li>
+
+        <li>
+          Seguimiento académico después de una situación compleja o crítica.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     6 ESTRATEGIAS DE APRENDIZAJE
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">6</span>
+    Estrategias de aprendizaje
+  </h2>
+
+  <div class="strategy-grid">
+
+    <article class="strategy">
+      <strong>Análisis de situaciones académicas contextualizadas</strong>
+    </article>
+
+    <article class="strategy">
+      <strong>Modelado mediante videos breves y demostraciones</strong>
+    </article>
+
+    <article class="strategy">
+      <strong>Práctica guiada con casos y simulaciones</strong>
+    </article>
+
+    <article class="strategy">
+      <strong>Retroalimentación y toma de decisiones docentes</strong>
+    </article>
+
+  </div>
+
+  <div class="lead-box" style="margin-top:16px">
+    <p>
+      El curso prioriza estrategias de aprendizaje orientadas a la aplicación práctica. Se utilizan casos contextualizados,
+      demostraciones breves, análisis de decisiones docentes, simulaciones conversacionales, fichas de análisis,
+      matrices de decisión, retroalimentación inmediata y actividades de transferencia a situaciones reales del aula.
+    </p>
+    <p>
+      Los recursos audiovisuales presentan de forma breve los conceptos esenciales y muestran cómo aplicar una herramienta
+      o secuencia de actuación en una situación concreta. Posteriormente, el docente aplica lo aprendido en casos nuevos,
+      justificando sus decisiones y recibiendo retroalimentación sobre la pertinencia de su respuesta.
+    </p>
+  </div>
+
+</section>
+
+<!-- ==================================================
+     7 SISTEMA DE EVALUACIÓN
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">7</span>
+    Sistema de evaluación
+  </h2>
+
+  <div class="eval-wrap">
+
+    <table class="eval-table">
+
+      <colgroup>
+        <col style="width:22%">
+        <col style="width:8%">
+        <col style="width:61%">
+        <col style="width:9%">
+      </colgroup>
+
+      <thead>
+
+        <tr>
+          <th>Evaluaciones</th>
+          <th>Cód.</th>
+          <th>Evidencia de aprendizaje</th>
+          <th>Peso</th>
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td class="eval-name">
+            Actividad módulo 1
+          </td>
+
+          <td class="eval-code">
+            AA1
+          </td>
+
+          <td class="eval-evidence">
+
+            <strong>
+              Análisis de señales y respuesta docente:
+            </strong>
+
+            reconocimiento de señales observables vinculadas al aprendizaje
+            y la participación, diferenciación entre hechos e interpretaciones
+            y formulación de una respuesta basada en escucha, exploración
+            y acompañamiento académico.
+
+          </td>
+
+          <td class="eval-weight">
+            25%
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td class="eval-name">
+            Actividad módulo 2
+          </td>
+
+          <td class="eval-code">
+            AA2
+          </td>
+
+          <td class="eval-evidence">
+
+            <strong>
+              Resolución de una situación de tensión o crisis:
+            </strong>
+
+            aplicación de estrategias de autorregulación, comunicación
+            reguladora, contención, desescalamiento, establecimiento de límites
+            y elección de una acción pedagógica o derivación pertinente.
+
+          </td>
+
+          <td class="eval-weight">
+            25%
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td class="eval-name">
+            Participación
+          </td>
+
+          <td class="eval-code">
+            PA
+          </td>
+
+          <td class="eval-evidence">
+
+            <strong>
+              Participación en actividades de reflexión e intercambio:
+            </strong>
+
+            análisis de situaciones docentes, revisión de respuestas posibles
+            y aportes relacionados con acompañamiento académico y gestión
+            emocional en el aula.
+
+          </td>
+
+          <td class="eval-weight">
+            10%
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td class="eval-name">
+            Evaluación final
+          </td>
+
+          <td class="eval-code">
+            EF
+          </td>
+
+          <td class="eval-evidence">
+
+            <strong>
+              Integración de los aprendizajes del curso:
+            </strong>
+
+            análisis de una situación académica compleja o crítica en la que el docente
+            reconoce señales, regula su propia respuesta, contiene el escalamiento,
+            conversa con el estudiante, establece acuerdos o límites y decide si
+            corresponde actuar, pausar, derivar y realizar seguimiento.
+
+          </td>
+
+          <td class="eval-weight">
+            40%
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+    <div class="eval-formula">
+      NF = 25% (AA1) + 25% (AA2) + 10% (PA) + 40% (EF)
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     8 ACTIVIDADES PRINCIPALES
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">8</span>
+    Actividades principales
+  </h2>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <colgroup>
+        <col style="width:8%">
+        <col style="width:32%">
+        <col style="width:60%">
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th>Módulo</th>
+          <th>Tema</th>
+          <th>Contenido y desempeño</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td class="module-col" rowspan="2">1</td>
+          <td class="topic-col">
+            <h4>TEMA 1: Reconocer señales que afectan el aprendizaje y la participación</h4>
+          </td>
+          <td>
+            <ul>
+              <li>Identificación de cambios en asistencia, participación, desempeño, comunicación y cumplimiento académico.</li>
+              <li>Diferenciación entre hechos observables, interpretaciones y juicios.</li>
+              <li>Comparación de cambios respecto del comportamiento habitual del estudiante.</li>
+              <li>Formulación de preguntas exploratorias antes de emitir conclusiones.</li>
+              <li>Selección de una primera acción pedagógica orientada a recuperar participación y vínculo académico.</li>
+              <li>Caso de análisis: <strong>“¿Desinterés o señal de desconexión?”</strong>.</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="topic-col">
+            <h4>TEMA 2: Escuchar, conversar y acordar acciones académicas</h4>
+          </td>
+          <td>
+            <ul>
+              <li>Escucha activa y validación de la experiencia del estudiante.</li>
+              <li>Uso de preguntas abiertas para comprender la dificultad antes de proponer soluciones.</li>
+              <li>Retroalimentación y comunicación sin juicio.</li>
+              <li>Clarificación de expectativas y alternativas académicas.</li>
+              <li>Construcción de acuerdos concretos de recuperación, participación o mejora.</li>
+              <li>Definición de un siguiente paso y seguimiento del compromiso académico.</li>
+              <li>Situación práctica: <strong>“No estoy pudiendo con el curso”</strong>.</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="module-col" rowspan="2">2</td>
+          <td class="topic-col">
+            <h4>TEMA 3: Autorregulación docente y desescalamiento de situaciones de tensión</h4>
+          </td>
+          <td>
+            <ul>
+              <li>Reconocimiento de detonantes personales y señales propias de activación emocional.</li>
+              <li>Aplicación de pausa consciente y regulación del tono, velocidad y respuesta inmediata.</li>
+              <li>Separación entre hecho, emoción y decisión pedagógica.</li>
+              <li>Uso de comunicación reguladora frente a reclamos, cuestionamientos y desacuerdos.</li>
+              <li>Establecimiento de límites claros sin confrontación.</li>
+              <li>Aplicación de estrategias de contención y desescalamiento.</li>
+              <li>Decisión sobre continuidad, pausa o reanudación de una interacción exigente.</li>
+              <li>Situación práctica: <strong>“La conversación se está tensando”</strong>.</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="topic-col">
+            <h4>TEMA 4: Intervenir ante situaciones críticas: actuación, límites y derivación</h4>
+          </td>
+          <td>
+            <ul>
+              <li>Diferenciación entre situaciones que pueden gestionarse pedagógicamente y aquellas que exceden el rol docente.</li>
+              <li>Aplicación de la secuencia <strong>RECONOCER → CONTENER → EVALUAR → ACTUAR → DERIVAR → DAR SEGUIMIENTO</strong>.</li>
+              <li>Selección de acciones de contención inicial y respuestas académicas pertinentes.</li>
+              <li>Reconocimiento de señales que requieren pausar la interacción o activar apoyo institucional.</li>
+              <li>Orientación respetuosa hacia los canales institucionales correspondientes.</li>
+              <li>Mantenimiento del acompañamiento académico después de la orientación o derivación.</li>
+              <li>Taller de decisión: <strong>“¿Qué puedo gestionar desde mi rol?”</strong>.</li>
+            </ul>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+<!-- ==================================================
+     9 REFERENCIAS
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">9</span>
+    Referencias y materiales complementarios
+  </h2>
+
+  <ul class="references">
+
+    <li>
+      CASEL.
+      <em>Fundamentals of SEL.</em>
+    </li>
+
+    <li>
+      <em>Student Belonging in Education.</em>
+    </li>
+
+    <li>
+      Greater Good in Education.
+      <em>Active Listening.</em>
+    </li>
+
+    <li>
+      Rosenberg, M.
+      <em>Nonviolent Communication.</em>
+    </li>
+
+    <li>
+      Greater Good in Education.
+      <em>Emotional Regulation.</em>
+    </li>
+
+    <li>
+      Stone, D., Patton, B. y Heen, S.
+      <em>Difficult Conversations.</em>
+    </li>
+
+    <li>
+      Material institucional SISE para orientación,
+      acompañamiento y actuación docente.
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- ==================================================
+     10 CERTIFICACIÓN
+================================================== -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    <span class="section-no">10</span>
+    Certificación
+  </h2>
+
+  <div class="cert-box">
+
+    <strong>
+      Condiciones de certificación
+    </strong>
+
+    <p>
+      Las condiciones de aprobación y certificación del curso se
+      aplicarán de acuerdo con los lineamientos vigentes del Plan
+      Anual de Capacitación Docente del Instituto SISE.
+    </p>
+
+  </div>
+
+</section>
+
+
+</div>
+
+
+<footer class="footer">
+
+  <span>
+    Plan Anual de Capacitación Docente 2026 · Instituto SISE
+  </span>
+
+  <strong>
+    #HAZLABIEN
+  </strong>
+
+</footer>
+
+</main>
+
+
+<button
+  class="pdf-download-float"
+  type="button"
+  id="downloadSyllabusPdf"
+  aria-label="Imprimir o guardar sílabo como PDF">
+  ↓ Descargar sílabo
+</button>
+
+
+<script>
+(function(){
+
+  const btn = document.getElementById('downloadSyllabusPdf');
+
+  if(btn){
+
+    btn.addEventListener('click',function(){
+
+      window.print();
+
+    });
+
+  }
+
+})();
+</script>
+
+</body>
+</html>
